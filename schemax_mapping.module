@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Code for the schemax_mapping feature.
+ */
+
+include_once 'schemax_mapping.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Add geofield feature layer to "Zoom to layer" behaviour
+ */
+function schemax_mapping_form_alter(&$form, &$form_state, $form_id) {
+  // 'ctools_export_ui_edit_item_form' = openlayers map edit form (via ctools)
+  if ($form_id == 'ctools_export_ui_edit_item_form') {
+    // Check for geofield module presence
+    if (module_exists('geofield')) {
+      // Check if geofield behaviour is enabled (this form element will most likely be only in openlayers map edit form)
+      if (drupal_array_get_nested_value($form, array('behaviors', 'openlayers_behavior_geofield', 'enabled', '#default_value'))) {
+        // Check form has options that need to be altered
+        if ($options = &drupal_array_get_nested_value($form, array('behaviors', 'openlayers_behavior_zoomtolayer', 'options_set', 'options', 'zoomtolayer', '#options'))) {
+          // Append 'openlayers_behavior_geofield' layer to existing layers
+          $options = array_merge($options, array('openlayers_behavior_geofield' => 'openlayers_behavior_geofield'));
+        }
+      }
+    }
+  }
+}
