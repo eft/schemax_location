@@ -1,0 +1,2 @@
+schemax_mapping
+===============
