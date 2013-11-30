@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * schemax_mapping.openlayers_maps.inc
+ * schemax_location.openlayers_maps.inc
  */
 
 /**
  * Implements hook_openlayers_maps().
  */
-function schemax_mapping_openlayers_maps() {
+function schemax_location_openlayers_maps() {
   $export = array();
 
   $openlayers_maps = new stdClass();

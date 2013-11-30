@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * schemax_mapping.features.inc
+ * schemax_location.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function schemax_mapping_ctools_plugin_api($module = NULL, $api = NULL) {
+function schemax_location_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "openlayers" && $api == "openlayers_maps") {
     return array("version" => "1");
   }
@@ -19,7 +19,7 @@ function schemax_mapping_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function schemax_mapping_node_info() {
+function schemax_location_node_info() {
   $items = array(
     'schemax_location' => array(
       'name' => t('Location'),

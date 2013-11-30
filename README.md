@@ -1,2 +1,2 @@
-schemax_mapping
+schemax_location
 ===============

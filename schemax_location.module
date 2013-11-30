@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * Code for the schemax_mapping feature.
+ * Code for the schemax_location feature.
  */
 
-include_once 'schemax_mapping.features.inc';
+include_once 'schemax_location.features.inc';
 
 /**
  * Implements hook_form_alter().
  *
  * Add geofield feature layer to "Zoom to layer" behaviour
  */
-function schemax_mapping_form_alter(&$form, &$form_state, $form_id) {
+function schemax_location_form_alter(&$form, &$form_state, $form_id) {
   // 'ctools_export_ui_edit_item_form' = openlayers map edit form (via ctools)
   if ($form_id == 'ctools_export_ui_edit_item_form') {
     // Check for geofield module presence
