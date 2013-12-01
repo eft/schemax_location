@@ -98,7 +98,6 @@ function schemax_location_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Location Description');
   t('Location Map');
   t('Location Type');
 
