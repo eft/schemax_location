@@ -4,6 +4,7 @@ core = 7.x
 package = Schemax
 version = 7.x-1.0-alpha1
 project = schemax_location
+dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = geofield
 dependencies[] = openlayers_ui
