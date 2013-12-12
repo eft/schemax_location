@@ -9,9 +9,9 @@
  */
 function schemax_location_taxonomy_default_vocabularies() {
   return array(
-    'location_type' => array(
-      'name' => 'Location type',
-      'machine_name' => 'location_type',
+    'location_types' => array(
+      'name' => 'Location types',
+      'machine_name' => 'location_types',
       'description' => 'e.g. clubhouse, field, gym',
       'hierarchy' => 0,
       'module' => 'taxonomy',

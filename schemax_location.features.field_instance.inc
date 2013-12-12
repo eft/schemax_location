@@ -59,8 +59,8 @@ function schemax_location_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schemax_location-field_schemax_location_type'
-  $field_instances['node-schemax_location-field_schemax_location_type'] = array(
+  // Exported field_instance: 'node-schemax_location-field_schemax_location_types'
+  $field_instances['node-schemax_location-field_schemax_location_types'] = array(
     'bundle' => 'schemax_location',
     'default_value' => NULL,
     'deleted' => 0,
@@ -81,7 +81,7 @@ function schemax_location_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_schemax_location_type',
+    'field_name' => 'field_schemax_location_types',
     'label' => 'Location Type',
     'required' => 1,
     'settings' => array(
