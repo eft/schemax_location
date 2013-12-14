@@ -61,7 +61,7 @@ function schemax_location_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_schemax_location_type'
+  // Exported field_base: 'field_schemax_location_types'
   $field_bases['field_schemax_location_types'] = array(
     'active' => 1,
     'cardinality' => 1,
