@@ -27,6 +27,12 @@ function schemax_location_field_default_field_instances() {
         'type' => 'geofield_openlayers',
         'weight' => 1,
       ),
+      'featured_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -72,6 +78,12 @@ function schemax_location_field_default_field_instances() {
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
+      ),
+      'featured_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
