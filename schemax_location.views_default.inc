@@ -287,8 +287,9 @@ function schemax_location_views_default_views() {
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['vocabulary'] = 'playing_surfaces';
   $handler->display->display_options['path'] = 'locations';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Map';
-  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['title'] = 'Locations';
+  $handler->display->display_options['menu']['weight'] = '20';
+  $handler->display->display_options['menu']['name'] = 'schemax-sports-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
@@ -307,6 +308,36 @@ function schemax_location_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['schemax_map_view'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Select any filter and click on Apply to see results'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Title'),
+    t('Playing Surface'),
+    t('Pick one or more'),
+    t('Location name'),
+    t('Enter part or all of the location name'),
+    t('Location Type'),
+    t('Selection one or locations'),
+    t('OpenLayers Data Overlay'),
+    t('Map'),
+    t('Geodata presented as a map'),
+    t('Playing surface'),
+    t('Map (raw data)'),
+    t('Geodata presented in raw format'),
+  );
   $export['schemax_map_view'] = $view;
 
   return $export;
