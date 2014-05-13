@@ -199,8 +199,12 @@ function schemax_location_views_default_views() {
     2 => '2',
     1 => 0,
     3 => 0,
-    5 => 0,
     4 => 0,
+    5 => 0,
+    7 => 0,
+    8 => 0,
+    6 => 0,
+    9 => 0,
   );
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['vocabulary'] = 'location_types';
@@ -235,13 +239,16 @@ function schemax_location_views_default_views() {
   $handler->display->display_options['filters']['title_1']['expose']['description'] = 'Enter part or all of the location name';
   $handler->display->display_options['filters']['title_1']['expose']['operator'] = 'title_1_op';
   $handler->display->display_options['filters']['title_1']['expose']['identifier'] = 'title';
-  $handler->display->display_options['filters']['title_1']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['title_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
-    5 => 0,
     4 => 0,
+    5 => 0,
+    7 => 0,
+    8 => 0,
+    6 => 0,
+    9 => 0,
   );
   /* Filter criterion: Content: Location Type (field_schemax_location_types) */
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['id'] = 'field_schemax_location_types_tid';
@@ -253,14 +260,17 @@ function schemax_location_views_default_views() {
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['expose']['label'] = 'Location Type';
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['expose']['operator'] = 'field_schemax_location_types_tid_op';
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['expose']['identifier'] = 'field_schemax_location_types_tid';
-  $handler->display->display_options['filters']['field_schemax_location_types_tid']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
-    5 => 0,
     4 => 0,
+    5 => 0,
+    7 => 0,
+    8 => 0,
+    6 => 0,
+    9 => 0,
   );
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_schemax_location_types_tid']['vocabulary'] = 'location_types';
@@ -274,14 +284,17 @@ function schemax_location_views_default_views() {
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['expose']['label'] = 'Playing surface';
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['expose']['operator'] = 'field_schemax_playing_surfaces_tid_op';
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['expose']['identifier'] = 'field_schemax_playing_surfaces_tid';
-  $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
-    5 => 0,
     4 => 0,
+    5 => 0,
+    7 => 0,
+    8 => 0,
+    6 => 0,
+    9 => 0,
   );
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_schemax_playing_surfaces_tid']['vocabulary'] = 'playing_surfaces';
