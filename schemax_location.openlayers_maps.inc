@@ -64,39 +64,39 @@ function schemax_location_openlayers_maps() {
     ),
     'layer_weight' => array(
       'geofield_formatter' => '0',
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
       'openlayers_geojson_picture_this' => '0',
       'openlayers_kml_example' => '0',
     ),
     'layer_styles' => array(
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'map_view_openlayers_1' => '0',
-      'geofield_formatter' => '0',
+      'schemax_map_view_openlayers_1' => '0',
+      'geofield_formatter' => 'schemaxtest',
     ),
     'layer_styles_select' => array(
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
       'geofield_formatter' => '0',
     ),
     'layer_styles_temporary' => array(
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
       'geofield_formatter' => '0',
     ),
     'layer_activated' => array(
       'geofield_formatter' => 'geofield_formatter',
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
-      'map_view_openlayers_1' => 0,
+      'schemax_map_view_openlayers_1' => 0,
     ),
     'layer_switcher' => array(
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
-      'map_view_openlayers_1' => 0,
+      'schemax_map_view_openlayers_1' => 0,
     ),
     'projection' => 'EPSG:900913',
     'displayProjection' => 'EPSG:4326',
@@ -123,7 +123,7 @@ function schemax_location_openlayers_maps() {
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '-123.04687500670518, 49.08555963644934',
+        'centerpoint' => '-123.0468749851456, 49.15296965423946',
         'zoom' => '10',
       ),
       'restrict' => array(
@@ -161,7 +161,7 @@ function schemax_location_openlayers_maps() {
       'google_normal' => 'google_normal',
     ),
     'layer_weight' => array(
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
       'openlayers_geojson_picture_this' => '0',
       'openlayers_kml_example' => '0',
       'geofield_formatter' => '0',
@@ -170,36 +170,36 @@ function schemax_location_openlayers_maps() {
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
     ),
     'layer_styles_select' => array(
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
     ),
     'layer_styles_temporary' => array(
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => '0',
     ),
     'layer_activated' => array(
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
-      'map_view_openlayers_1' => 0,
+      'schemax_map_view_openlayers_1' => 0,
     ),
     'layer_switcher' => array(
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
-      'map_view_openlayers_1' => 0,
+      'schemax_map_view_openlayers_1' => 0,
     ),
     'projection' => 'EPSG:900913',
     'displayProjection' => 'EPSG:4326',
     'styles' => array(
-      'default' => 'default',
+      'default' => 'schemaxtest',
       'select' => 'default',
       'temporary' => 'default',
     ),
@@ -221,7 +221,7 @@ function schemax_location_openlayers_maps() {
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '-123.1018066545004, 49.07409082344322',
+        'centerpoint' => '-123.0468749851456, 49.15296965423946',
         'zoom' => '12',
       ),
       'restrict' => array(
@@ -247,6 +247,26 @@ function schemax_location_openlayers_maps() {
         'zoomBoxEnabled' => 1,
         'documentDrag' => 0,
       ),
+      'openlayers_behavior_fp' => array(
+        'layers' => array(
+          'schemax_map_view_openlayers_1' => array(
+            'layer' => 1,
+            'popup' => 1,
+            'tooltip' => 0,
+            'templates' => array(
+              'item' => '',
+              'list' => '',
+              'single' => array(
+                'title' => '<div class="openlayers-fp openlayers-tooltip-name">${.name}</div>',
+                'content' => '',
+              ),
+              'hover' => '',
+              'hoverlist' => '',
+              'hoveritem' => '',
+            ),
+          ),
+        ),
+      ),
       'openlayers_behavior_panzoombar' => array(
         'zoomWorldIcon' => 0,
         'panIcons' => 1,
@@ -254,9 +274,7 @@ function schemax_location_openlayers_maps() {
       'openlayers_behavior_zoomtolayer' => array(
         'zoomtolayer' => array(
           'schemax_map_view_openlayers_1' => 'schemax_map_view_openlayers_1',
-          'google_satellite' => 0,
           'google_hybrid' => 0,
-          'google_normal' => 0,
         ),
         'point_zoom_level' => '5',
         'zoomtolayer_scale' => '1',
@@ -264,9 +282,7 @@ function schemax_location_openlayers_maps() {
     ),
     'default_layer' => 'google_hybrid',
     'layers' => array(
-      'google_satellite' => 'google_satellite',
       'google_hybrid' => 'google_hybrid',
-      'google_normal' => 'google_normal',
       'schemax_map_view_openlayers_1' => 'schemax_map_view_openlayers_1',
     ),
     'layer_weight' => array(
@@ -279,7 +295,7 @@ function schemax_location_openlayers_maps() {
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'schemax_map_view_openlayers_1' => '0',
+      'schemax_map_view_openlayers_1' => 'schemaxtest',
     ),
     'layer_styles_select' => array(
       'geofield_formatter' => '0',

@@ -103,9 +103,7 @@ function schemax_location_views_default_views() {
     'other_bottom' => 'title',
     'other_left' => 'title',
     'name_field' => 'title',
-    'description_field' => '',
-    'view_mode' => 'full',
-    'style_field' => '',
+    'description_field' => 'field_schemax_playing_surfaces',
   );
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
@@ -125,10 +123,17 @@ function schemax_location_views_default_views() {
   $handler->display->display_options['fields']['field_schemax_geo']['settings'] = array(
     'data' => 'full',
   );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  /* Field: Content: Playing Surfaces */
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['id'] = 'field_schemax_playing_surfaces';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['table'] = 'field_data_field_schemax_playing_surfaces';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['field'] = 'field_schemax_playing_surfaces';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['label'] = '';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_schemax_playing_surfaces']['field_api_classes'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -337,7 +342,6 @@ function schemax_location_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Title'),
     t('Playing Surface'),
     t('Pick one or more'),
     t('Location name'),

@@ -1,9 +1,9 @@
 <?php
+
 /**
  * @file
  * Code for the schemax_location feature.
  */
-
 include_once 'schemax_location.features.inc';
 
 /**
@@ -27,3 +27,79 @@ function schemax_location_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
+/**
+ * Implements hook_field_attach_form().
+ */
+function schemax_location_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+
+  // Check if the form is a node edit form.
+  if (!empty($form['#node_edit_form'])) {
+
+    $bundle = $form['#bundle'];
+    if ($bundle == 'schemax_location') {
+      schemax_location_add_js();
+    }
+  }
+}
+
+/**
+ * Implements MODULE_preprocess_HOOK().
+ */
+function schemax_location_preprocess_html(&$variables) {
+  $path = drupal_get_path_alias();
+
+  // Add custom js and css for paths starting with 'location'.
+  if (strpos($path, 'location') === 0) {
+
+    schemax_location_add_js();
+    drupal_add_css(drupal_get_path('module', 'schemax_location') . '/css/schemax_location.css', array('group' => CSS_DEFAULT, 'weight' => 100));
+  }
+}
+
+/**
+ * Add js for map overlays
+ */
+function schemax_location_add_js() {
+
+  drupal_add_js(drupal_get_path('module', 'schemax_location') . '/js/schemax_location.js', array('group' => JS_DEFAULT, 'weight' => 100));
+}
+
+/**
+ * OpenLayers Styles
+ *
+ * This hook tells OpenLayers about the available styles
+ * that can be used in maps.
+ *
+ * Ensure that you are telling CTools about this as well.
+ * @see openlayers_example_ctools_plugin_api().
+ *
+ * @return
+ *   Return an associative array with index being a unique string
+ *   identifier, and simple objects with the following properties:
+ *   - "api_version":
+ *   - "name":
+ *   - "title":
+ *   - "data":
+ */
+//function schemax_location_openlayers_styles() {
+//  // Taken from openlayers.styles.inc
+//
+//  $styles = array();
+//
+//  $style = new stdClass();
+//  $style->api_version = 1;
+//  $style->name = 'schemax';
+//  $style->title = t('Schemax default style');
+//  $style->description = t('Basic schemax default style.');
+//  $style->data = array(
+//    'pointRadius' => '5',
+//    'fillColor' => '#FFCC66',
+//    'strokeColor' => '#FF9933',
+//    'strokeWidth' => '4',
+//    'fillOpacity' => '0.5'
+//  );
+//  $styles[$style->name] = $style;
+//
+//  return $styles;
+//}
