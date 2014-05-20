@@ -13,8 +13,8 @@ function schemax_location_openlayers_styles() {
   $openlayers_styles = new stdClass();
   $openlayers_styles->disabled = FALSE; /* Edit this to true to make a default openlayers_styles disabled initially */
   $openlayers_styles->api_version = 1;
-  $openlayers_styles->name = 'schemaxtest';
-  $openlayers_styles->title = 'schemaxTest';
+  $openlayers_styles->name = 'schemax_marker_style';
+  $openlayers_styles->title = 'Schemax Marker Style';
   $openlayers_styles->description = '';
   $openlayers_styles->data = array(
     'pointRadius' => 6,
@@ -28,7 +28,7 @@ function schemax_location_openlayers_styles() {
     'graphicOpacity' => 1,
     'labelAlign' => 'cm',
   );
-  $export['schemaxtest'] = $openlayers_styles;
+  $export['schemax_marker_style'] = $openlayers_styles;
 
   return $export;
 }
