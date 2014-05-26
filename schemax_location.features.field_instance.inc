@@ -22,6 +22,8 @@ function schemax_location_field_default_field_instances() {
         'module' => 'geofield',
         'settings' => array(
           'data' => 'full',
+          'empty_fields_emptyfieldtext_empty_text' => '',
+          'empty_fields_handler' => '',
           'map_preset' => 'schemax_geofield_formatter_map',
         ),
         'type' => 'geofield_openlayers',
@@ -75,7 +77,10 @@ function schemax_location_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'empty_fields_emptyfieldtext_empty_text' => '',
+          'empty_fields_handler' => '',
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),

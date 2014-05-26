@@ -17,7 +17,7 @@ function schemax_location_openlayers_maps() {
   $openlayers_maps->title = 'Geofield Formatter Map (Schemax)';
   $openlayers_maps->description = 'A Map Used for Geofield Output';
   $openlayers_maps->data = array(
-    'width' => '600px',
+    'width' => 'auto',
     'height' => '400px',
     'image_path' => 'sites/all/modules/contrib/openlayers/themes/default_dark/img/',
     'css_path' => 'sites/all/modules/contrib/openlayers/themes/default_dark/style.css',
